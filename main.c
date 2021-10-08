@@ -9,6 +9,7 @@
 #include "utils/string_utils.h"
 #include "disk/read_data.h"
 #include "security/authentication.h"
+#include "utils/message_handler.h"
 
 #define DELIMITER " "
 
@@ -76,7 +77,7 @@ void *connection_handler(void *socket_desc){
     //Get the socket descriptor
     int sock = *(int*)socket_desc;
     int read_size;
-    char *response , client_message[2000];
+    char client_message[2000];
 
     int authenticated = 0;
 
@@ -109,13 +110,13 @@ void *connection_handler(void *socket_desc){
                 return 0;
             }
 
+        } else {
+            char response[2048];
+            handle_message((char **) arguments, argument_sections, response);
+            write(sock, response , strlen(response));
+            memset(response, 0, strlen(response));
         }
-        else {
-//            response = handle_message((char **) arguments, argument_sections);
-//            printf("%s\n", response);
-//            write(sock, response , strlen(response));
-            write(sock, "done" , strlen("done"));
-        }
+        memset(client_message, 0, sizeof(client_message));
     }
 
     if(read_size == 0){

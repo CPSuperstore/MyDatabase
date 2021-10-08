@@ -29,8 +29,12 @@ disk/read_data.h
 /cygdrive/d/Programming/C/MyDatabase/disk/read_data.h
 security/authentication.h
 /cygdrive/d/Programming/C/MyDatabase/security/authentication.h
+utils/message_handler.h
+/cygdrive/d/Programming/C/MyDatabase/utils/message_handler.h
 
 /cygdrive/d/Programming/C/MyDatabase/security/authentication.h
+
+/cygdrive/d/Programming/C/MyDatabase/utils/message_handler.h
 
 /cygdrive/d/Programming/C/MyDatabase/utils/string_utils.h
 

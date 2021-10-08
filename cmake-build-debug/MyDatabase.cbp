@@ -83,6 +83,9 @@
 		<Unit filename="/cygdrive/d/Programming/C/MyDatabase/security/authentication.h">
 			<Option target="MyDatabase"/>
 		</Unit>
+		<Unit filename="/cygdrive/d/Programming/C/MyDatabase/utils/message_handler.h">
+			<Option target="MyDatabase"/>
+		</Unit>
 		<Unit filename="/cygdrive/d/Programming/C/MyDatabase/utils/string_utils.h">
 			<Option target="MyDatabase"/>
 		</Unit>
